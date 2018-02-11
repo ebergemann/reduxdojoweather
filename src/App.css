@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+.navList li {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  margin: 5px;
+  border-left: solid 2px black
+}
+
+.navList li:first-child {
+  border: none;
+}
+
+.navList li a {
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+}
+
+.forecastCont {
+  border: solid 2px black;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 30px;
+}
+
+.flexcard {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.forecastDetail {
+  width: 25vw;
+  height: 33vh;
+  padding-top: 15px;
+  
+}
+
+.imageContainer {
+  width: 25vw;
+  padding: 15px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.details li {
+  list-style: none;
+  
+}
+.details li h3 {
+  display: inline;
+}
