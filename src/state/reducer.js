@@ -1,16 +1,16 @@
 import {
-    CURRENT_CITY
+    CURRENT_CITY, NEW_CITY
 } from './types';
 
 const initialState = {
     cities: [
-        {id: 1, city: 'Seattle', state: 'WA'},
-        {id: 2, city: 'San Jose', state: 'CA'},
-        {id: 3, city: 'Burbank', state: 'CA'},
-        {id: 4, city: 'Dallas', state: 'TX'},
-        {id: 5, city: 'Washington', state: 'DC'},
-        {id: 6, city: 'Chicago', state: 'IL'},
-        {id: 7, city: 'Tulsa', state: 'OK'}
+        {city: 'Seattle', state: 'WA'},
+        {city: 'San Jose', state: 'CA'},
+        {city: 'Burbank', state: 'CA'},
+        {city: 'Dallas', state: 'TX'},
+        {city: 'Washington', state: 'DC'},
+        {city: 'Chicago', state: 'IL'},
+        {city: 'Tulsa', state: 'OK'}
     ],
     currentCity: {}
 }
@@ -19,6 +19,8 @@ const reducer = (state=initialState, action) => {
     switch (action.type){
         case CURRENT_CITY:
             return {...state, currentCity: action.payload}
+        case NEW_CITY:
+            return {...state, currentCity: action.payload, cities: state.cities.concat([{city: action.payload.name, state: ""}])}
         default:
             return state;
     }
